@@ -1,0 +1,14 @@
+ set term post eps color enhanced 'Helvetica' 18
+ set out 'ws/1H4+2_0.00100.2dbb.eps'
+ set xlabel 'x/a_0'
+ set ylabel 'z/a_0'
+ unset key
+ set view map
+ unset clabel
+ set contour base
+ maxval=   8.4180913873489399E-005
+ set logscale z
+ set cntrparam levels incremental 1E-4,1.2,50
+ set xrange[0:   94.570768328391097      ]
+ set yrange[0:   68.310000000000002      ]
+ sp 'ws/1H4+2_0.00100.2dbb.plotdata' using 1:2:($3/maxval) w l lc rgb 'black' nosurface
